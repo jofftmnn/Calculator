@@ -1,0 +1,104 @@
+:root {
+  --bg: #000;
+  --panel: #0f0f0f;
+  --btn: #1c1c1e;
+  --func: #2c2c2e;
+  --op: #ff9f0a;
+  --text: #ffffff;
+  --muted: #a1a1a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.calculator {
+  width: 360px;
+  background: var(--panel);
+  border-radius: 32px;
+  padding: 22px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+}
+
+.display {
+  height: 110px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.screen {
+  font-size: 56px;
+  font-weight: 500;
+  color: var(--text);
+  word-break: break-all;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+button {
+  height: 72px;
+  border-radius: 50%;
+  border: none;
+  font-size: 26px;
+  color: var(--text);
+  background: var(--btn);
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.08s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+  filter: brightness(1.2);
+}
+
+button.func {
+  background: var(--func);
+  color: var(--muted);
+}
+
+button.op {
+  background: var(--op);
+  color: #000;
+}
+
+button.equal {
+  background: var(--op);
+  color: #000;
+}
+
+button.zero {
+  grid-column: span 2;
+  border-radius: 40px;
+  text-align: left;
+  padding-left: 28px;
+}
+
+@media (max-width: 420px) {
+  .calculator {
+    width: 94vw;
+  }
+  .screen {
+    font-size: 44px;
+  }
+  button {
+    height: 60px;
+    font-size: 22px;
+  }
+}
