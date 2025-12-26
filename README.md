@@ -1,6 +1,6 @@
 # Calculator
 
-A simple dark-themed calculator created using **HTML, CSS, and JavaScript**.  
+A simple dark-themed calculator created using HTML, CSS, and JavaScript.  
 It performs basic arithmetic operations with a clean and responsive design.
 
 ## Features
